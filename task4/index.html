@@ -2,40 +2,36 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="./normalize.css">
     <link rel="stylesheet" href="global.css" />
     <link rel="stylesheet" href="index.css" />
+    <title>Frontend-разработчик</title>
   </head>
   <body>
-    <div class="desktop-m">
+
+    <header>
+      <div class="header-left-side">
+        <div class="logo-container">
+          <div class="logo">
+            <img class="heraldic" src="assets/heraldic-28.svg"  alt="heraldic"/>
+            <div class="logo-text"><img class="ru" src="assets/ru-25.svg"  alt="logo"/></div>
+          </div>
+        </div>
+        <div class="tabs">
+          <div class="selected-tab tab-text">Финтех курсы</div>
+          <div class="not-selected-tab not-selected-tab-text">Стажировки</div>
+          <div class="not-selected-tab not-selected-tab-text">Мероприятия и партнерства</div>
+        </div>
+      </div>
+      <div class="log-in-container">
+        <div class="log-in-text">Войти</div>
+        <img class="log-in-icon" src="assets/24px-login-2.svg" alt="login"/>
+      </div>
+    </header>
+
+    <div class="main-container">
       <div class="frame-wrapper">
         <div class="frame">
-          <header class="header">
-            <div class="main-header">
-              <div class="element">
-                <div class="master">
-                  <div class="left-side">
-                    <div class="container">
-                      <div class="logo">
-                        <img class="heraldic" src="assets/heraldic-28.svg"  alt="heraldic"/>
-                        <div class="logo-text"><img class="ru" src="assets/ru-25.svg"  alt="logo"/></div>
-                      </div>
-                    </div>
-                    <div class="tabs">
-                      <div class="text-wrapper"><div class="text">Финтех курсы</div></div>
-                      <div class="div-wrapper"><div class="div">Стажировки</div></div>
-                      <div class="div-wrapper"><div class="div">Мероприятия и партнерства</div></div>
-                    </div>
-                  </div>
-                  <div class="right-side">
-                    <div class="logged-out">
-                      <div class="item">Войти</div>
-                      <img class="element-login" src="assets/24px-login-2.svg"  alt="login"/>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </header>
           <div class="default">
             <div class="text-block">
               <div class="text-2">
@@ -44,9 +40,11 @@
                   Трехмесячный бесплатный учебный курс от Финтеха, который можно проходить из любой точки России
                 </p>
               </div>
-              <button class="beautiful-button text-3">Нажми меня</button>
+              <a href="not_found.html">
+                <button class="beautiful-button text-3">Нажми меня</button>
+              </a>
             </div>
-            <img class="desktopherobannernew" src="assets/desktopherobannernew-3-1-1.png"  alt="banner"/>
+            <img class="banner" src="assets/desktopherobannernew-3-1-1.png" alt="banner"/>
           </div>
           <div class="frame-2">
             <div class="title-wrapper"><div class="title-2">Кому подойдет курс</div></div>
@@ -70,13 +68,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="image">
-                  <img class="img" src="assets/desktoptilesfourplusone-3-1.png" />
-                  <div class="image">
-                    <img class="img" src="assets/desktoptilesfourplusone-3-1.png" />
-                    <img class="img-2" src="assets/desktoptilesfourplusone-3-1-1.png" />
-                  </div>
-                </div>
+                <img class="img-2" src="assets/desktoptilesfourplusone-3-1-1.png"  alt="notebook"/>
               </div>
             </div>
           </div>
@@ -246,28 +238,16 @@
               </div>
             </div>
           </div>
-          <div class="group">
-            <div class="footer-advert">
-              <footer class="footer">
-                <div class="overlap">
-                  <div class="info-wrapper">
-                    <div class="info">
-                      <div class="overlap-group-2">
-                        <div class="rectangle-2"></div>
-                        <div class="element-2">© 2022 «Тинькофф Образование»</div>
-                        <p class="element-3">
-                          <span class="span">По вопросам пишите на </span>
-                          <span class="text-wrapper-4">edu@tinkoff.ru</span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </footer>
-            </div>
-          </div>
         </div>
       </div>
     </div>
+
+    <footer class="footer">
+      <div class="rectangle-border"></div>
+      <div class="footer_bottom">
+        <span class="span">© 2022 «Тинькофф Образование»</span>
+        <span class="span">По вопросам пишите на <a href="mailto:edu@tinkoff.ru">edu@tinkoff.ru</a></span>
+      </div>
+    </footer>
   </body>
 </html>

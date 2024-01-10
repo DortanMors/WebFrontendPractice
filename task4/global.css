@@ -8,8 +8,9 @@
 
 html,
 body {
-  margin: 0;
+  color: var(--main-font-color);
   height: 100%;
+  width: 100%;
 }
 
 button:focus-visible {
@@ -17,6 +18,12 @@ button:focus-visible {
 }
 
 :root {
+  font-size: 16px;
+  font-family: Roboto, serif;
+
+  --main-font-color: #000221;
+  --main-border-color: #000221;
+  --main-shadow-color: rgba(0, 2, 33, 0.44);
   --daytexttext-01: rgba(0, 0, 0, 0.8);
   --daytexttext-02: rgba(0, 0, 0, 0.54);
   --daytextlink: rgba(51, 111, 238, 1);
