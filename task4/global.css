@@ -23,6 +23,7 @@ button:focus-visible {
 
   --main-font-color: #000221;
   --main-border-color: #000221;
+  --main-container-width: 1104px;
   --main-shadow-color: rgba(0, 2, 33, 0.44);
   --daytexttext-01: rgba(0, 0, 0, 0.8);
   --daytexttext-02: rgba(0, 0, 0, 0.54);
@@ -30,7 +31,7 @@ button:focus-visible {
   --day-text-text-01: rgba(0, 0, 0, 0.8);
   --daybasebase-02: rgba(246, 247, 248, 1);
   --daybasebase-01: rgba(255, 255, 255, 1);
-  --day-base-base-08: rgba(51, 51, 51, 1);
+  --icon-num-color: rgba(51, 51, 51, 1);
   --daybaseelevation-01: rgba(255, 255, 255, 1);
   --day-text-link: rgba(51, 111, 238, 1);
   --night-text-text-01: rgba(255, 255, 255, 1);
