@@ -1,0 +1,109 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto:900,800,400,700");
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+}
+
+:root {
+  --daytexttext-01: rgba(0, 0, 0, 0.8);
+  --daytexttext-02: rgba(0, 0, 0, 0.54);
+  --daytextlink: rgba(51, 111, 238, 1);
+  --day-text-text-01: rgba(0, 0, 0, 0.8);
+  --daybasebase-02: rgba(246, 247, 248, 1);
+  --daybasebase-01: rgba(255, 255, 255, 1);
+  --day-base-base-08: rgba(51, 51, 51, 1);
+  --daybaseelevation-01: rgba(255, 255, 255, 1);
+  --day-text-link: rgba(51, 111, 238, 1);
+  --night-text-text-01: rgba(255, 255, 255, 1);
+  --day-base-primary: rgba(255, 221, 45, 1);
+  --day-base-secondary: rgba(236, 241, 247, 1);
+  --day-base-clear: rgba(0, 0, 0, 0.08);
+  --night-base-clear: rgba(255, 255, 255, 0.32);
+  --nighttexttext-01: rgba(255, 255, 255, 0.88);
+  --nighttexttext-02: rgba(255, 255, 255, 0.72);
+  --nighttextlink: rgba(61, 145, 255, 1);
+  --nightbasebase-09: rgba(255, 255, 255, 1);
+  --daytexttext-positive: rgba(0, 161, 39, 1);
+  --nighttexttext-positive: rgba(16, 217, 82, 1);
+  --daybasebase-04: rgba(221, 223, 224, 1);
+  --nightbasebase-04: rgba(44, 44, 46, 1);
+  --nightbaseelevation-01: rgba(32, 32, 32, 1);
+  --nightbaseelevation-02: rgba(49, 49, 49, 1);
+  --daytexttext-01-inverse: rgba(255, 255, 255, 1);
+  --daytexttext-02-inverse: rgba(255, 255, 255, 0.72);
+  --daystatussucess-fill: rgba(0, 185, 45, 1);
+  --nightstatussuccess-fill: rgba(16, 217, 82, 1);
+  --daybaseprimary: rgba(255, 221, 45, 1);
+  --nightbaseprimary: rgba(255, 221, 45, 1);
+  --daystatussuccess-bg: rgba(0, 185, 45, 0.12);
+  --nightstatussuccess-bg: rgba(16, 217, 82, 0.28);
+  --desktop-15-body-m-font-family: "NeueHaas Unica W1G-Regular", Helvetica;
+  --desktop-15-body-m-font-weight: 400;
+  --desktop-15-body-m-font-size: 15px;
+  --desktop-15-body-m-letter-spacing: 0px;
+  --desktop-15-body-m-line-height: 24px;
+  --desktop-15-body-m-font-style: normal;
+  --desktop-13-body-s-font-family: "NeueHaas Unica W1G-Regular", Helvetica;
+  --desktop-13-body-s-font-weight: 400;
+  --desktop-13-body-s-font-size: 13px;
+  --desktop-13-body-s-letter-spacing: 0px;
+  --desktop-13-body-s-line-height: 20px;
+  --desktop-13-body-s-font-style: normal;
+  --desktop-body-s-font-family: "NeueHaas Unica W1G-Regular", Helvetica;
+  --desktop-body-s-font-weight: 400;
+  --desktop-body-s-font-size: 13px;
+  --desktop-body-s-letter-spacing: 0px;
+  --desktop-body-s-line-height: 20px;
+  --desktop-body-s-font-style: normal;
+  --deprecated-body-m-deprecated-font-family: "Roboto-Regular", Helvetica;
+  --deprecated-body-m-deprecated-font-weight: 400;
+  --deprecated-body-m-deprecated-font-size: 13px;
+  --deprecated-body-m-deprecated-letter-spacing: 0px;
+  --deprecated-body-m-deprecated-line-height: 20px;
+  --deprecated-body-m-deprecated-font-style: normal;
+  --desktop-heading-6-font-family: "TinkoffSans-Medium", Helvetica;
+  --desktop-heading-6-font-weight: 500;
+  --desktop-heading-6-font-size: 20px;
+  --desktop-heading-6-letter-spacing: 0px;
+  --desktop-heading-6-line-height: 24px;
+  --desktop-heading-6-font-style: normal;
+  --desktop-body-XS-font-family: "NeueHaas Unica W1G-Regular", Helvetica;
+  --desktop-body-XS-font-weight: 400;
+  --desktop-body-XS-font-size: 11px;
+  --desktop-body-XS-letter-spacing: 0px;
+  --desktop-body-XS-line-height: 16px;
+  --desktop-body-XS-font-style: normal;
+  --desktop-body-s-16-font-family: "NeueHaas Unica W1G-Regular", Helvetica;
+  --desktop-body-s-16-font-weight: 400;
+  --desktop-body-s-16-font-size: 13px;
+  --desktop-body-s-16-letter-spacing: 0px;
+  --desktop-body-s-16-line-height: 16px;
+  --desktop-body-s-16-font-style: normal;
+  --deprecated-heading-5-deprecated-font-family: "Roboto-Bold", Helvetica;
+  --deprecated-heading-5-deprecated-font-weight: 700;
+  --deprecated-heading-5-deprecated-font-size: 13px;
+  --deprecated-heading-5-deprecated-letter-spacing: 0px;
+  --deprecated-heading-5-deprecated-line-height: 20px;
+  --deprecated-heading-5-deprecated-font-style: normal;
+  --desktop-body-m-font-family: "NeueHaas Unica W1G-Regular", Helvetica;
+  --desktop-body-m-font-weight: 400;
+  --desktop-body-m-font-size: 15px;
+  --desktop-body-m-letter-spacing: 0px;
+  --desktop-body-m-line-height: 24px;
+  --desktop-body-m-font-style: normal;
+  --shadow-default: 0px 4px 24px 0px rgba(0, 0, 0, 0.12);
+  --border-night-bottom: ;
+  --border-day-bottom: ;
+}
