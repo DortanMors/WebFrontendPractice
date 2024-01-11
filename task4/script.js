@@ -8,12 +8,17 @@ function addBlock() {
 
     createCard(name, imgUri, description, id, provider)
 
-    // Очищаем поля ввода
+    // Очистка поля ввода
     document.getElementById("inputFieldName").value = "";
     document.getElementById("inputFieldImg").value = "";
     document.getElementById("inputFieldDescription").value = "";
     document.getElementById("inputFieldId").value = "";
     document.getElementById("inputFieldProvider").value = "";
+
+    // Сброс валидации формы
+    document.getElementById("inputForm").reset();
+    // Заблокировать кнопку после добавления блока
+    document.getElementById("addButton").disabled = true;
 }
 
 function createCard(name, imgUri, description, id, provider) {

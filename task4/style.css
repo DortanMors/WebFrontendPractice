@@ -108,6 +108,13 @@ input {
   color: #fff;
 }
 
+button:disabled,
+button:disabled:hover{
+  /* Добавленные стили для disabled кнопки */
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
 header {
   display: flex;
   flex-direction: row;
