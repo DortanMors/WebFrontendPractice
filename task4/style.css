@@ -1,19 +1,132 @@
-.desktop {
-  background-color: #ffffff;
+.main-container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
+  height: 100vh;
+  margin: 0;
 }
 
-.desktop .div {
+h2 {
+  margin-bottom: 24px;
+}
+
+.cards-container {
+  width: 600px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ширина элемента, можно настроить под ваши нужды */
+  grid-gap: 5px; /* Расстояние между элементами */
+  overflow: scroll;
+}
+
+.card {
+  width: 258px;
+  height: 153px;
+  background-color: #fffdfd;
+  border-radius: 16px;
+  border: 1px solid #000000;
+  padding: 24px;
+  overflow: hidden;
+}
+
+.card-other {
+  font-family: "Roboto", Helvetica, serif;
+  font-weight: 400;
+  color: #000000;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+}
+
+.card-name {
+  width: 103px;
+  font-family: "Roboto", Helvetica, serif;
+  font-weight: 700;
+  color: var(--daytexttext-01);
+  margin-left: 8px;
+  font-size: 24px;
+  letter-spacing: 0;
+}
+
+.card-description {
+  font-size: 13px;
+  line-height: 28px;
+  font-family: "Roboto", Helvetica, serif;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.card-photo {
+  width: 73px;
+  height: 60px;
+  background-color: #d9d9d9;
+}
+
+.photo-and-name {
+  display: flex;
+  flex-direction: row;
+  padding: 4px 0;
+}
+
+.half {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left-half {
+  background-color: #f0f0f0;
+}
+
+.right-half {
+  background-color: #e0e0e0;
+}
+
+input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.beautiful-button {
+  border-radius: 5px;
+  display: inline-block;
+  padding: 16px 36px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0 solid;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--day-base-primary);
+}
+
+.beautiful-button:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 24px;
+  align-self: stretch;
+  align-items: center;
+  margin-bottom: 1rem;
+  box-shadow: var(--main-shadow-color) 0 1px 4px 0 ;
+}
+
+.div {
   background-color: #ffffff;
   width: 1440px;
   height: 1024px;
   position: relative;
 }
 
-.desktop .rectangle {
+.rectangle {
   position: absolute;
   width: 964px;
   height: 22px;
@@ -24,24 +137,24 @@
   border-bottom-style: solid;
   border-color: #000000;
   transform: rotate(90deg);
-  box-shadow: inset 0px -1px 0px #e7e8ea;
+  box-shadow: inset 0 -1px 0 #e7e8ea;
 }
 
-.desktop .overlap {
+.overlap {
   position: absolute;
   width: 1440px;
   height: 62px;
   top: 0;
   left: 0;
   background-color: #d9d9d9;
-  box-shadow: 0px 2px 4px #00000040;
+  box-shadow: 0 2px 4px #00000040;
 }
 
-.desktop .text-wrapper {
+.text-wrapper {
   position: absolute;
   top: 26px;
   left: 34px;
-  font-family: "Roboto", Helvetica;
+  font-family: "Roboto", Helvetica, serif;
   font-weight: 400;
   color: #000000;
   font-size: 13px;
@@ -50,16 +163,7 @@
   white-space: nowrap;
 }
 
-.desktop .tui-button {
-  display: inline-flex;
-  align-items: flex-start;
-  position: absolute;
-  top: 9px;
-  left: 1151px;
-  border-radius: 8px;
-}
-
-.desktop .master {
+.master {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -71,7 +175,7 @@
   border-radius: 8px;
 }
 
-.desktop .label {
+.label {
   position: relative;
   width: fit-content;
   margin-top: -1px;
@@ -85,11 +189,11 @@
   font-style: var(--desktop-body-m-font-style);
 }
 
-.desktop .text-wrapper-2 {
+.text-wrapper-2 {
   position: absolute;
   top: 87px;
   left: 34px;
-  font-family: "Roboto", Helvetica;
+  font-family: "Roboto", Helvetica, serif;
   font-weight: 400;
   color: #000000;
   font-size: 20px;
@@ -98,7 +202,7 @@
   white-space: nowrap;
 }
 
-.desktop .view {
+.view {
   position: absolute;
   width: 592px;
   height: 48px;
@@ -107,19 +211,16 @@
   border-radius: 5px;
 }
 
-.desktop .property-default {
+.property-default {
   position: relative;
   height: 48px;
   background-color: #d9d9d9;
   border-radius: 16px;
 }
 
-.desktop .text-wrapper-3 {
-  position: absolute;
+.text-wrapper-3 {
   width: 475px;
-  top: 13px;
-  left: 20px;
-  font-family: "Roboto", Helvetica;
+  font-family: "Roboto", Helvetica, serif;
   font-weight: 400;
   color: #000000;
   font-size: 15px;
@@ -127,7 +228,7 @@
   line-height: 20px;
 }
 
-.desktop .div-wrapper {
+.div-wrapper {
   position: absolute;
   width: 592px;
   height: 48px;
@@ -137,7 +238,7 @@
   border-radius: 16px;
 }
 
-.desktop .view-2 {
+.view-2 {
   position: absolute;
   width: 592px;
   height: 48px;
@@ -147,7 +248,7 @@
   border-radius: 16px;
 }
 
-.desktop .view-3 {
+.view-3 {
   position: absolute;
   width: 592px;
   height: 137px;
@@ -157,7 +258,7 @@
   border-radius: 16px;
 }
 
-.desktop .overlap-group-wrapper {
+.overlap-group-wrapper {
   position: absolute;
   width: 113px;
   height: 43px;
@@ -165,13 +266,13 @@
   left: 489px;
 }
 
-.desktop .overlap-group {
+.overlap-group {
   position: relative;
   height: 43px;
   border-radius: 8px;
 }
 
-.desktop .rectangle-2 {
+.rectangle-2 {
   width: 113px;
   height: 43px;
   top: 0;
@@ -182,7 +283,7 @@
   background-color: #d9d9d9;
 }
 
-.desktop .text-wrapper-4 {
+.text-wrapper-4 {
   height: 20px;
   top: 10px;
   left: 31px;
@@ -190,14 +291,14 @@
   text-align: center;
   line-height: 20px;
   position: absolute;
-  font-family: "Roboto", Helvetica;
+  font-family: "Roboto", Helvetica, serif;
   font-weight: 400;
   color: #000000;
   letter-spacing: 0;
   white-space: nowrap;
 }
 
-.desktop .view-4 {
+.view-4 {
   position: absolute;
   width: 258px;
   height: 153px;
@@ -205,80 +306,28 @@
   left: 698px;
   background-color: #fffdfd;
   border-radius: 16px;
-  border: 1px solid;
-  border-color: #000000;
+  border: 1px solid #000000;
 }
 
-.desktop .title {
-  position: absolute;
-  width: 103px;
-  top: 30px;
-  left: 110px;
-  font-family: "Roboto", Helvetica;
-  font-weight: 700;
-  color: var(--daytexttext-01);
-  font-size: 24px;
-  letter-spacing: 0;
-  line-height: 28px;
-}
-
-.desktop .overlap-2 {
-  position: absolute;
+.overlap-2 {
   width: 73px;
   height: 87px;
-  top: 3px;
-  left: 26px;
 }
 
-.desktop .text-wrapper-5 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-family: "Roboto", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 13px;
-  letter-spacing: 0;
-  line-height: 28px;
-  white-space: nowrap;
-}
-
-.desktop .rectangle-3 {
-  width: 73px;
-  height: 60px;
-  top: 27px;
-  position: absolute;
-  left: 0;
-  background-color: #d9d9d9;
-}
-
-.desktop .text-wrapper-6 {
-  top: 97px;
-  left: 25px;
-  font-size: 13px;
-  line-height: 28px;
-  position: absolute;
-  font-family: "Roboto", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  letter-spacing: 0;
-  white-space: nowrap;
-}
-
-.desktop .text-wrapper-7 {
+.text-wrapper-7 {
   top: 73px;
   left: 706px;
   font-size: 24px;
   line-height: 28px;
   position: absolute;
-  font-family: "Roboto", Helvetica;
+  font-family: "Roboto", Helvetica, serif;
   font-weight: 400;
   color: #000000;
   letter-spacing: 0;
   white-space: nowrap;
 }
 
-.desktop .overlap-3 {
+.overlap-3 {
   position: absolute;
   width: 258px;
   height: 153px;
@@ -287,19 +336,7 @@
   border-radius: 16px;
 }
 
-.desktop .view-5 {
-  position: absolute;
-  width: 258px;
-  height: 153px;
-  top: 0;
-  left: 0;
-  background-color: #fffdfd;
-  border-radius: 16px;
-  border: 1px solid;
-  border-color: #000000;
-}
-
-.desktop .master-wrapper {
+.master-wrapper {
   top: 8px;
   left: 179px;
   display: inline-flex;
@@ -308,7 +345,7 @@
   border-radius: 8px;
 }
 
-.desktop .master-2 {
+.master-2 {
   align-items: center;
   padding: 4px 6px;
   border-radius: 6px;
@@ -320,7 +357,7 @@
   overflow: hidden;
 }
 
-.desktop .label-2 {
+.label-2 {
   position: relative;
   width: fit-content;
   margin-top: -1px;
@@ -335,7 +372,7 @@
   font-style: var(--desktop-body-s-16-font-style);
 }
 
-.desktop .view-6 {
+.view-6 {
   position: absolute;
   width: 258px;
   height: 153px;
@@ -343,11 +380,10 @@
   left: 698px;
   background-color: #fffdfd;
   border-radius: 16px;
-  border: 1px solid;
-  border-color: #000000;
+  border: 1px solid #000000;
 }
 
-.desktop .button {
+.button {
   all: unset;
   box-sizing: border-box;
   top: 84px;
@@ -358,7 +394,7 @@
   border-radius: 8px;
 }
 
-.desktop .master-3 {
+.master-3 {
   align-items: flex-start;
   padding: 8px 12px;
   border-radius: 8px;

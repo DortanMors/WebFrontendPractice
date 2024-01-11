@@ -5,63 +5,47 @@
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="styleguide.css" />
     <link rel="stylesheet" href="style.css" />
+    <title>Карточки</title>
+    <script src="script.js"></script>
   </head>
   <body>
-    <div class="desktop">
-      <div class="div">
-        <div class="rectangle"></div>
-        <div class="overlap">
-          <div class="text-wrapper">Славка Фомин 6407</div>
-          <div class="tui-button">
-            <div class="master"><div class="label">Засетапить начальные значения</div></div>
-          </div>
-        </div>
-        <div class="text-wrapper-2">Форма добавления карточки товара</div>
-        <div class="view">
-          <div class="property-default"><div class="text-wrapper-3">Название</div></div>
-        </div>
-        <div class="div-wrapper"><div class="text-wrapper-3">Ссылка на изображение</div></div>
-        <div class="view-2"><div class="text-wrapper-3">Прочие поля</div></div>
-        <div class="view-3"><div class="text-wrapper-3">Описание</div></div>
-        <div class="overlap-group-wrapper">
-          <div class="overlap-group">
-            <div class="rectangle-2"></div>
-            <div class="text-wrapper-4">Кнопка</div>
-          </div>
-        </div>
-        <div class="view-4">
-          <div class="title">Товар</div>
-          <div class="overlap-2">
-            <div class="text-wrapper-5">Id: 134</div>
-            <div class="rectangle-3"></div>
-          </div>
-          <div class="text-wrapper-6">Описание</div>
-        </div>
-        <div class="text-wrapper-7">Витрина карточек</div>
-        <div class="overlap-3">
-          <div class="view-5">
-            <div class="title">Товар</div>
-            <div class="overlap-2">
-              <div class="text-wrapper-5">Id: 134</div>
-              <div class="rectangle-3"></div>
-            </div>
-            <div class="text-wrapper-6">Описание</div>
-          </div>
-          <div class="master-wrapper">
-            <div class="master-2"><div class="label-2">Редачить</div></div>
-          </div>
-        </div>
-        <div class="view-6">
-          <div class="title">Товар</div>
-          <div class="overlap-2">
-            <div class="text-wrapper-5">Id: 134</div>
-            <div class="rectangle-3"></div>
-          </div>
-          <div class="text-wrapper-6">Описание</div>
-        </div>
-        <button class="button">
-          <div class="master-3"><div class="label-2">Button</div></div>
+    <header>
+      <h2>Славка Фомин 6407</h2>
+      <button class="beautiful-button" onclick="addBlock()">
+        Засетапить начальные значения
+      </button>
+    </header>
+
+    <div class="main-container">
+      <div class="half left-half">
+        <h2>Форма добавления карточки товара</h2>
+
+        <form>
+          <input id="inputFieldName" type="text" class="property-default text-wrapper-3" placeholder="Название">
+          <input id="inputFieldImg" type="text" class="property-default text-wrapper-3" placeholder="Ссылка на изображение">
+          <input id="inputFieldDescription" type="text" class="property-default text-wrapper-3" placeholder="Описание">
+          <input id="inputFieldOther" type="text" class="property-default text-wrapper-3" placeholder="Прочие поля">
+        </form>
+
+        <button class="beautiful-button" onclick="addBlock()">
+          Добавить картонку
         </button>
+      </div>
+
+      <div class="half right-half">
+        <h2>Витрина карточек</h2>
+        <div class="cards-container">
+          <div class="card">
+            <div>
+              <div class="card-other">Id: 134</div>
+                <div class="photo-and-name">
+                  <img class="card-photo" alt="card photo" src="https://aboba.ru/wp-content/uploads/2021/06/ac1jzh4-removebg-preview1.png">
+                  <div class="card-name">Товар</div>
+                </div>
+              <div class="card-description">Описание</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
