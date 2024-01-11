@@ -17,8 +17,8 @@ h2 {
 }
 
 .card {
-  width: 258px;
-  height: 153px;
+  width: 260px;
+  height: 240px;
   background-color: #fffdfd;
   border-radius: 16px;
   border: 1px solid #000000;
@@ -399,6 +399,23 @@ header {
   align-items: flex-start;
   position: absolute;
   border-radius: 8px;
+}
+
+.card-action-delete {
+  padding: 10px;
+  color: #bb3838;
+}
+
+.card-action-edit {
+  padding: 10px;
+  color: var(--nightbaseaccent);
+}
+
+.card-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: stretch;
 }
 
 .master-3 {
