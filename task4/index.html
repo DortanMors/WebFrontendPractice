@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Карточки</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h2>Славка Фомин 6407</h2>
+      <button class="beautiful-button" onclick="createStartCards()">
+        Засетапить начальные значения
+      </button>
+    </header>
+
+    <div class="main-container">
+      <div class="half left-half">
+        <h2>Форма добавления карточки товара</h2>
+
+        <form id="inputForm">
+          <input id="inputFieldName" type="text" class="property-default text-wrapper-3" placeholder="Название" required>
+          <input id="inputFieldImg" type="text" class="property-default text-wrapper-3" placeholder="Ссылка на изображение" required>
+          <input id="inputFieldDescription" type="text" class="property-default text-wrapper-3" placeholder="Описание" required>
+          <input id="inputFieldId" type="text" class="property-default text-wrapper-3" placeholder="Код товара" required>
+          <input id="inputFieldProvider" type="text" class="property-default text-wrapper-3" placeholder="Поставщик" required>
+        </form>
+
+        <button class="beautiful-button" onclick="addBlock()" id="addButton" disabled>
+          Добавить картонку
+        </button>
+      </div>
+
+      <div class="half right-half">
+        <h2>Витрина карточек</h2>
+        <div class="cards-container">
+        </div>
+      </div>
+    </div>
+
+  <script>
+    // обработчик событий для валидации
+    document.getElementById("inputForm").addEventListener("input", function () {
+      let inputs = document.querySelectorAll("#inputForm input");
+      let isValid = true;
+
+      inputs.forEach(function (input) {
+        if (!input.checkValidity()) {
+          isValid = false;
+        }
+      });
+
+      document.getElementById("addButton").disabled = !isValid;
+      console.log("Valid="+isValid)
+    });
+  </script>
+  </body>
+</html>
