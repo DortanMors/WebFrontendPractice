@@ -43,5 +43,43 @@ describe('es6', () => {
             // TODO
             assert.strictEqual(!!dic, true);
         });
+
+        it('слово добавляется в словарь', () => {
+            const dic = new core.Dictionary();
+            dic.addWord('apple', 'a fruit');
+            assert.strictEqual(dic.hasWord('apple'), true);
+        });
+
+        it('выдаёт определение слова', () => {
+            const dic = new core.Dictionary();
+            dic.addWord('apple', 'a fruit');
+            const definition = dic.getDefinition('apple');
+            assert.strictEqual(definition, 'a fruit');
+        });
+
+        it('проверяет, есть ли слово в словаре', () => {
+            const dic = new core.Dictionary();
+            dic.addWord('book', 'a written or printed work');
+            const exists = dic.hasWord('book');
+            const notExists = dic.hasWord('test');
+            assert.strictEqual(exists, true);
+            assert.strictEqual(notExists, false);
+        });
+
+        it('удаляет слово', () => {
+            const dic = new core.Dictionary();
+            dic.addWord('apple', 'a fruit');
+            dic.removeWord('apple');
+            assert.strictEqual(dic.hasWord('apple'), false);
+        });
+
+        it('возвращает все слова из словаря', () => {
+            const dic = new core.Dictionary();
+            dic.addWord('apple', 'a fruit');
+            dic.addWord('book', 'a written or printed work');
+            dic.addWord('computer', 'an electronic device for storing and processing data');
+            const allWords = dic.getAllWords();
+            assert.deepStrictEqual(allWords, ['apple', 'book', 'computer']);
+        });
     });
 });
